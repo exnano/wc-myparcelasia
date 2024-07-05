@@ -6,13 +6,5 @@
   "require": {
     "wanfeiyy/dd": "^1.0",
     "vlucas/phpdotenv": "^5.4"
-  },
-  "scripts": {
-    "post-install-cmd": [
-      "cd web/app/plugins/wc-myparcelasia && composer install --no-dev -o"
-    ],
-    "post-update-cmd": [
-      "cd web/app/plugins/wc-myparcelasia && composer install --no-dev -o"
-    ]
   }
 }
