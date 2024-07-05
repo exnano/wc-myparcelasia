@@ -1,10 +1,21 @@
 {
-    "description": "Custom MyParcel Asia plugin for Woocommerce",
-    "name": "mpa/woocommerce",
-    "license": "MIT",
-    "type": "project",
-    "require": {
-        "wanfeiyy/dd": "^1.0",
-        "vlucas/phpdotenv": "^5.4"
-    }
+  "description": "Custom MyParcel Asia plugin for Woocommerce",
+  "name": "exnano/wc-myparcelasia",
+  "license": "MIT",
+  "type": "wordpress-plugin",
+  "require": {
+    "wanfeiyy/dd": "^1.0",
+    "vlucas/phpdotenv": "^5.4"
+  },
+  "scripts": {
+    "post-install-cmd": [
+      "composer run-script optimize-autoloader"
+    ],
+    "post-update-cmd": [
+      "composer run-script optimize-autoloader"
+    ],
+    "optimize-autoloader": [
+      "composer install --no-dev -o"
+    ]
+  }
 }
