@@ -24,8 +24,10 @@ if (in_array('woocommerce/woocommerce.php', apply_filters('active_plugins', get_
 
         require __DIR__ . '/vendor/autoload.php';
         include 'include/mpa_config.php';
+
         $dotenv = Dotenv\Dotenv::createImmutable(__DIR__);
-        if (getenv('WP_ENV') == 'development') {
+
+        if (file_exists('.env') && getenv('WP_ENV') == 'development') {
             $dotenv->load();
         }
 
