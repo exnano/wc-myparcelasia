@@ -9,13 +9,10 @@
   },
   "scripts": {
     "post-install-cmd": [
-      "composer run-script optimize-autoloader"
+      "cd web/app/plugins/wc-myparcelasia && composer install --no-dev -o"
     ],
     "post-update-cmd": [
-      "composer run-script optimize-autoloader"
-    ],
-    "optimize-autoloader": [
-      "composer install --no-dev -o"
+      "cd web/app/plugins/wc-myparcelasia && composer install --no-dev -o"
     ]
   }
 }
